@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="external.css"> </head>
+
+<body>
+    <h1>Backtracking</h1>
+    <p>Copyright ©2002 by David Matuszek</p>
+    <p>Backtracking is a form of recursion.</p>
+    <p>The usual <em>scenario</em> is that you are faced with a <i>number</i> of options, and you must choose one of these.<br /> After you make your <strong>choice</strong> you will get a new set of <b>options</b>; just what set of options you get depends
+        on what choice you made. This procedure is repeated over and over until you reach a final state. If you made a good sequence of choices, your final state is a goal state; if you didn't, it isn't.
+
+    </p>
+    <p>Conceptually, you <ins>start</ins> at the root of a tree; the tree <del>probably</del> has some good leaves and some bad leaves, <strike>though it may be that the leaves are all good or all bad.</strike> You want to get to a good leaf. At each node,
+        beginning with the root, you choose one of its children to move to, and you keep this up until you get to a leaf.</p>
+    <p>Suppose you get to a bad leaf. You can <sub>backtrack</sub> to continue the search for a 12<sup>th</sup> oct 2021 good leaf by revoking your most recent choice, and trying out the next option in that set of options. If you run out of options, revoke
+        the choice that got you here, and try another choice at that node. If you end up at the root with no options left, there are no good leaves to be found.</p>
+    <p>This needs an example.</p>
+    <img src="treesearch.gif">
+
+    <br>
+    <img src="A21.jpg">
+    <hr/>
+
+    <ol>
+        <li>Starting at Root, your options are A and B. You choose A.</li>
+        <li>At A, your options are C and D. You choose C.</li>
+        <li>C is bad. Go back to A.</li>
+        <li>At A, you have already tried C, and it failed. Try D.</li>
+        <li>D is bad. Go back to A.</li>
+        <li>At A, you have no options left to try. Go back to Root.</li>
+        <li>At Root, you have already tried A. Try B.</li>
+        <li>At B, your options are E and F. Try E.</li>
+        <li>E is good. Congratulations!</li>
+    </ol>
+    <pre>boolean solve(Node n) {
+        if n is a leaf node {
+            if the leaf is a goal node, return true
+            else return false
+        } else {
+            for each child c of n {
+                if solve(c) succeeds, return true
+            }
+            return false
+        }
+    }</pre>
+    <pre>
+    boolean solve(Node n) {
+        if n is a leaf node {
+            if the leaf is a goal node, return true
+            else return false
+        } else {
+            for each child c of n {
+                if solve(c) succeeds, return true
+            }
+            return false
+        }
+    }
+</pre>
+    <a href="https://www.prepbytes.com/">Go To Prepbytes</a>
+    <a href="author.html">About the Author</a>
+    <br>
+    <br>
+    <table border="1px" cellpadding="10px" cellspacing="10px" align="center">
+        <thead>
+            <tr align="center">
+                <th>S NO.</th>
+                <th>NAME</th>
+                <th>CLASS</th>
+                <th>ROLL NO.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <td>1</td>
+                <td>Rajiv</td>
+                <td>11<sup>th</sup></td>
+                <td>12345</td>
+            </tr>
+            <tr align="center">
+                <td>2</td>
+                <td colspan="2">Sneha</td>
+                <td>11<sup>th</sup></td>
+
+            </tr>
+            <tr align="center">
+                <td>3</td>
+                <td colspan="2">Tina</td>
+                <td>11<sup>th</sup></td>
+                <td>12347</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <iframe src="https://www.prepbytes.com/" scrolling="auto" frameborder="1" width="100%" height="400px" <iframe width="560" height="315" src="https://www.youtube.com/embed/Ul_EM2xL_i4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <br><br>
+    <table border="2px">
+        <thead>
+            <tr>
+                <!-- this is comment -->
+                <th rowspan="2">Heading 1</th>
+                <th>Heading 2</th>
+                <th rowspan="2">Heading 3</th>
+                <th>Heading 4</th>
+
+            </tr>
+            <tr>
+                <th>sub Heading 1</th>
+
+                <th>sub Heading 2</th>
+
+            </tr>
+
+        </thead>
+    </table>
+
+</body>
+
+</html>
