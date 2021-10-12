@@ -44,6 +44,7 @@
             border: mediumblue;
             border-style: dotted;
             border-width: 4px;
+            padding: 10px;
         }
         
         .fonttype {
