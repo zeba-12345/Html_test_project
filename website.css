@@ -8,6 +8,22 @@ body {
     line-height: 1.5;
 }
 
+h2 {
+    margin: 0;
+    padding: 1em;
+}
+
+p {
+    margin: 0;
+    padding: 1em;
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
 .bg {
     background-image: url(https://static.pexels.com/photos/248515/pexels-photo-248515.png);
     height: 450px;
@@ -21,6 +37,7 @@ body {
 }
 
 #headerId {
+    min-height: 450px;
     text-align: center;
 }
 
@@ -38,11 +55,43 @@ body {
     border: 1px solid #666;
     background: #333;
     padding: 1em;
-    margin: 1.5em;
+    margin: 1.7em;
 }
 
 .btn:hover {
     background: #fff;
     color: #333;
     cursor: pointer
+}
+
+#section-a {
+    background: #fff;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+#section-b {
+    display: grid;
+    padding: 2em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#section-b li {
+    background: #fff;
+    color: #333;
+    width: 31px;
+    margin-bottom: 1em;
+}
+
+#section-c {
+    background-color: #fff;
+    color: #333;
+    padding: 0 23m 0 2em;
 }
